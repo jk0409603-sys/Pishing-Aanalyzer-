@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">  
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>PishingGuard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel=""preconnection"" href="https://fonts.googleapis.com">
+    <link rel="preconnection" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+</head>
+    <body>
+        <canvas id="scene" aria-hidden="true"></canvas>
+        <button class="btn" id="themebtn" aria-label="Switch light or dark mode">Switch Theme</button>
+    </body>
+
+ <section class="screen active" id="welcome">
+  <div class=""brand styl=""position:absolute;top:22px>PishingGuard</div>
+  <h1>Welcome to PishingGuard</h1>
+  <p>Protecting you from phishing attacks</p>
+ <button class="btn fill" id="startBtn">Get Started</button>
+ </section>
+
+ <section class="screen" id="gate">
+    <div class="gate-wrap">
+        <div class="char" id="charA" aria-hidden="true"></div>
+            <div class="card">
+                <div calss="gate-note hidden" id="gateNote">You have 3-free checks.Login or Sign Up to keep going</div>
+            </div>
+            <div class="tabs"><button id="tabLogin" class="on" >Log in</button><button id="tabSignup">Sign Up</button></div>
+
+            <h2 id="gTitle">Welcome Back!</h2>
+            <p class="sub" id="gSub">Log in to continue</p>
+            <form id="authForm">
+                <div id="nameRow" class="hidden">
+                    <label for="mn">Name</label>
+                    <input type="text" id="mn" autocomplete="name" placeholder="Enter your name" required>
+                </div>
+            </form>
+    </div>
+ </section>
+
+
+
+
+</html>
